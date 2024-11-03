@@ -1,16 +1,15 @@
-function replaceNumber(string){
-  let parts = string.split('')
+function replace_numbers(string){
+  let new_word = string.split('')
 
-  parts = parts.map(part=>{
-    if(!isNaN(part) && part.trim()!==''){
-      return "!";
+  new_word = new_word.map(word=>{
+    if(!isNaN(word) && word.trim()!==''){
+      return '!';
     }
-     return part;
+    return word 
   });
 
-  let result = parts.join('');
-  console.log("The new results are:" + result);
-  return result
+  const  result = new_word.join('');
+  return result;
 }
 
-replaceNumber("Hello123");
+console.log(replace_numbers('Hello123'));
